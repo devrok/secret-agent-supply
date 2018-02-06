@@ -1,7 +1,7 @@
 /* ---- SOME BASIC STYLES ---- */
 html {
   font-family: Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   background-color: black;
 }
@@ -24,7 +24,7 @@ header img {
 /* ---- BANNER SECTION ---- */
 .containerbanner {
   width: 100%;
-  height: 24rem;
+  height: 25rem;
   background: url("../images/moto.jpeg");
   background-repeat: no-repeat;
   background-position: center;
@@ -51,7 +51,7 @@ nav {
 /* ---- FOOTER SECTION ---- */
 footer {
   width: 100%;
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
   display: flex;
   align-items: center;
 }
