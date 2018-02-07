@@ -10,8 +10,8 @@ html {
   width: 960px;
   margin-left: auto;
   margin-right: auto;
-  background-color: lightblue;
-  opacity: 0.5;
+  /* background-color: lightblue;
+  opacity: 0.5; */
 }
 
 /* ---- HEADER SECTION ---- */
@@ -115,28 +115,56 @@ nav span {
 
 .productitem {
   width: 30%;
-  height: 15rem;
+  /* height: 15rem; */
   border: 4px solid black;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.productitem img {
-  /* max-width: 100%; */
-  max-height: 9rem;
-  width: auto;
-  display: block;
-  padding: 2rem 2rem;
+  padding-top: 2rem;
 }
 
 .productitem p {
   background-color: black;
   width: 100%;
-  padding: 0.5rem 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
   text-align: center;
 }
+
+.productitem img {
+  /* width: auto; */
+  /* max-height: 9rem; */
+  width: auto;
+  height: 9rem;
+  display: block;
+  /* margin: 0 2rem; */
+  /* margin: 2rem 2rem; */
+  /* margin-left: 2rem;
+  margin-right: 2rem; */
+}
+
+
+
+
+.productitemimagecontainer {
+  height: 9rem;
+  width: auto;
+  padding: 2rem 2rem;
+  overflow: hidden;
+}
+
+.productitemimagecontainer img {
+  /* max-width: 100%; */
+  /* height: 9rem; */
+  max-width: auto;
+  height: 100%;
+  display: block;
+  /* padding: 2rem 2rem; */
+}
+
+
 
 /* ---- LOCATION & OPENING SECTION ---- */
 .containerinfoitems {
