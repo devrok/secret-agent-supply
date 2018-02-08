@@ -7,7 +7,8 @@ html {
 }
 
 .sitecontainer {
-  width: 960px;
+  max-width: 960px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   /* background-color: lightblue;
@@ -22,7 +23,7 @@ header {
 .headercontainer {
   display: flex;
   align-items: center;
-  /* height: 2.32rem; */
+  justify-content: flex-start;
 }
 
 .headercontainer img {
@@ -48,11 +49,9 @@ header {
   background-size: cover;
   display: flex;
   align-items: center;
-  /* padding-left: 2rem;
-  padding-right: 2rem; */
 }
 
-.containerbannertext {
+.containerbannertextcontainer {
     width: 20rem;
     padding: 2rem 3rem;
     background-color: black;
@@ -66,6 +65,7 @@ header {
 .containerbanner h1 {
   font-size: 2rem;
   font-weight: bold;
+  margin-top: 0.25rem;
 }
 
 /* ---- NAVIGATION SECTION  ---- */
@@ -75,14 +75,9 @@ header {
 }
 
 nav {
-  /* width: 100%;
-  height: 3rem;
-  background-color: firebrick; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding-left: 2rem;
-  padding-right: 2rem; */
 }
 
 nav span {
@@ -90,16 +85,17 @@ nav span {
   margin-bottom: 0.75rem;
 }
 
+.defaultnavcontainer {
+}
+
+.mobilenavcontainer {
+    display: none;
+}
+
 /* ---- CONTENT SECTION ---- */
 .containercontent {
   width: 100%;
-  /* height: 35rem; */
   background-color: white;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 2rem;
-  padding-right: 2rem; */
   padding-top: 3rem;
   padding-bottom: 4rem;
 }
@@ -107,7 +103,6 @@ nav span {
 /* ---- PRODUCT SECTION ---- */
 .containerproductitems {
   width: 100%;
-  /* padding-top: 3rem; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -115,7 +110,6 @@ nav span {
 
 .productitem {
   width: 30%;
-  /* height: 15rem; */
   border: 4px solid black;
   overflow: hidden;
   display: flex;
@@ -145,6 +139,20 @@ nav span {
   text-align: center;
 }
 
+
+.productitem.pen {
+  /* just to identify */
+}
+
+.productitem.watch {
+  /* just to identify */
+}
+
+.productitem.glasses {
+  /* just to identify */
+}
+
+
 /* ---- LOCATION & OPENING SECTION ---- */
 .containerinfoitems {
   margin-top: 3rem;
@@ -162,7 +170,6 @@ nav span {
 
 .headertext {
   background-color: black;
-  /* width: 100%; */
   padding: 1rem 2rem;
 }
 
@@ -179,4 +186,134 @@ footer {
   height: 5rem;
   display: flex;
   align-items: center;
+}
+
+/* ---- RESPONIVE MEDIA QUERIES ---- */
+@media only screen and (max-width: 1024px) {
+  .sitecontainer {
+    /* max-width: 960px; */
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* ---- NAVIGATION ---- */
+  .defaultnavcontainer {
+    display: none;
+  }
+
+  .mobilenavcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  /* ---- PRODUCTS ---- */
+  .productitem {
+    width: 47%;
+  }
+
+  .productitem.glasses {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .sitecontainer {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* ---- BANNER SECTION ---- */
+  .containerbanner {
+    width: 100%;
+    height: 15rem;
+    background: url("../images/moto.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .containerbannertextcontainer {
+      width: 100%;
+      margin-top: 10rem;
+      padding-top: 1rem;
+      padding-left: 2rem;
+      background-color: black;
+  }
+
+  .containerbanner span {
+    font-size: 0.77rem;
+    font-weight: bold;
+  }
+
+  .containerbanner h1 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0.25rem;
+  }
+
+  .defaultnavcontainer {
+    display: none;
+  }
+
+  /* ---- NAVIGATION ---- */
+  .mobilenavcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  /* ---- PRODUCTS ---- */
+  .containerproductitems {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productitem {
+    width: 90%;
+  }
+
+  .productitem.watch {
+    display: none;
+  }
+
+  .productitem.glasses {
+    display: none;
+  }
+
+  /* ---- LOCATION & OPENING SECTION ---- */
+  .containerinfoitems {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .infoitem {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headertext {
+    margin-top: 0.25rem;
+    background-color: black;
+    padding: 1rem 2rem;
+  }
+
+  .blacktext {
+    color: black;
+  }
+
+  /* ---- FOOTER SECTION ---- */
+  .footercontainer {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
